@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className='flex flex-col'>
       <Routes>
-        <Route path = '/' Component={Home}/>
+        <Route path = '/home' Component={Home}/>
         <Route path ='/login' Component={Login}/>
         <Route path='/register' Component={Register}/>
         <Route path='/comment' Component={Comment}/>

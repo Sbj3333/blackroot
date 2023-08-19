@@ -4,7 +4,7 @@ import  {auth, db}  from './firebase'
 import { GoogleAuthProvider } from 'firebase/auth'
 import { signInWithPopup } from 'firebase/auth'
 import { signInWithEmailAndPassword } from 'firebase/auth'
-
+import { Link } from 'react-router-dom'
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -40,7 +40,9 @@ const Login = () => {
                 <form className='flex flex-col mt-[5vh] gap-5 items-center' onSubmit={handleLogin}>
                     <input placeholder='Enter Your Email' type='email' value={email} onChange={(e) => setEmail(e.target.value)}></input>
                     <input placeholder='Enter Your Secret Password' type='password' value={password} onChange={(e) => setPassword(e.target.value)}></input>
-                    <button className='bg-[#0f15d3] h-9 w-[10vw] text-white rounded-3xl' type='submit'>Let's say Hello !</button>
+                   
+                    <button className='bg-[#0f15d3] h-9 w-[10vw] text-white rounded-3xl'  href='/home'>Let's say Hello !</button>
+                  
                 </form>
                 <button className='bg-[#0f15d3] h-9 w-[10vw] text-white rounded-3xl m-4' onClick={handleGoogleLogin}>Log in with Google</button>
 
