@@ -1,17 +1,18 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Carous from './Carous'
-import Category from './Category'
-import Calci from './Calci'
+import { Route, Routes } from 'react-router-dom'
+import Login from './Login'
+import Home from './Home'
+import Register from './Register'
 
 
 const App = () => {
   return (
     <div className='flex flex-col'>
-      <Navbar/>
-      <Carous/>
-      <Category/>
-      <Calci/>
+      <Routes>
+        <Route path = '/' Component={Home}/>
+        <Route path ='/login' Component={Login}/>
+        <Route path='/register' Component={Register}/>
+      </Routes>
     </div>
   )
 }
