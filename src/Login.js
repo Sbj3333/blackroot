@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import Background from './Background'
-import  {auth}  from './firebase'
+import  {auth, db}  from './firebase'
+import { GoogleAuthProvider } from 'firebase/auth'
+import { signInWithPopup } from 'firebase/auth'
+import { signInWithEmailAndPassword } from 'firebase/auth'
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -10,17 +13,17 @@ const Login = () => {
     const handleLogin = async(e) =>{
         e.preventDefault();
         try{
-            await auth.signInWithEmailAndPassword(email, password);
+            await signInWithEmailAndPassword(auth, email, password);
             console.log("logged in succesfully")
         }catch(error){
-            console.log("error loggin in", error);
+            console.log("error loggin in", error); 
         }
     };
 
     const handleGoogleLogin = async() =>{
-        const provider = new auth.GoogleAuthProvider();
+        const provider = new GoogleAuthProvider();
         try{
-            await auth.signInWithPopup(provider);
+            await signInWithPopup(auth, provider);
             console.log("logged in with google");
         }catch(error){
             console.log("erorr loggin in", error);

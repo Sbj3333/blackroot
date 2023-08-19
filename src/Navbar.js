@@ -6,13 +6,16 @@ const Navbar = () => {
         <div className='justify center'>
             <ul className='flex gap-[20vw] items-center justify-center'>
                 <li>
-                    <a href='#' >Home</a>
+                    <a href='/' >Home</a>
                 </li>
                 <li>
-                    <a href='#' >News</a>
+                    <a href='/news' >News</a>
                 </li>
                 <li>
-                    <a href='#' >Explore</a>
+                    <a href='/comment' >Chat</a>
+                </li>
+                <li>
+                    <a href='/profile' onClick={alert("this is profile")}>Profile</a>
                 </li>
             </ul>
         </div>

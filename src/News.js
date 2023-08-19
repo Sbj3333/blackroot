@@ -7,7 +7,7 @@ const News = ({category}) => {
     const [news, setNews] = useState([]);
 
     useEffect(() => {
-        const apiKey = "63f7c1132317475b9f1ef7ebaec83919";
+        const apiKey = "ff23be76ca994ed9972d7460c9fb48d2";
         const url = `https://newsapi.org/v2/top-headlines?category=${category}&apiKey=${apiKey}&language=en`;
         axios.get(url)
             .then(response => {
