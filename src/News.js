@@ -21,19 +21,19 @@ const News = ({category}) => {
     }, [category]);
   return (
     <div className='bg-[#1e2137]'>
-    <div className='text-[50px] ml-[42vw] text-white items-center'>{category} News</div>
-    <ul className='grid grid-cols-3 gap-y-4 justify-center items-center'>
-        {news.map((article, index) => (
-            <li key={index} className='bg-slate-600 h-[50vh] rounded-xl p-4'>
-                <div className='flex flex-col items-center'>
-                    <img src={article.urlToImage} alt="Article" className='h-[200px] w-full object-cover'/>
-                    <h3 className='mt-2 text-white'>{article.title}</h3>
-                    <a href={article.url} target="_blank" rel="noopener noreferrer" className='bg-blue-500 rounded-xl px-2 py-1 mt-2 text-center text-white'>Read more</a>
-                </div>
-            </li>
-        ))}
-    </ul>
-</div>
+        <div className='text-[50px] ml-[42vw] text-white items-center'>{category} News</div>
+            <ul className='grid grid-cols-3 gap-y-4 justify-center items-center'>
+                {news.map((article, index) => (
+                    <li key={index} className='bg-slate-600 h-[50vh] w-[30vw] rounded-xl p-4 cursor-wait '>
+                        <div className='flex flex-col items-center'>
+                            <img src={article.urlToImage} alt="Article" className='h-[200px] w-full object-cover'/>
+                            <h3 className='mt-2 text-white'>{article.title}</h3>
+                            <a href={article.url} target="_blank" rel="noopener noreferrer" className='bg-blue-500 rounded-xl px-2 py-1 mt-2 text-center text-white'>Read more</a>
+                        </div>
+                    </li>
+                ))}
+            </ul>
+    </div>
 
   )
 }

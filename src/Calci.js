@@ -23,7 +23,7 @@ function Calci() {
     };
 
     return (
-        <div className="bg-[#8997bf] p-4">
+        <div className="bg-[#6778a5] p-4">
             <h1 className="text-xl text-white mb-4">Carbon Footprint Calculator</h1>
             <label htmlFor="distance" className="block mb-2">Distance (miles):</label>
             <input type="number" id="distance" className="p-2 border mb-2" value={distance} onChange={(e) => setDistance(e.target.value)} />
